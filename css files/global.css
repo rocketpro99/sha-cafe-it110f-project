@@ -1,5 +1,15 @@
 /* CSS for the header section seen at the top of the page */
 
+:root {
+    color-scheme: light;
+    --cream: #f7efe8;
+    --cream-dark: #efe0d2;
+    --brown: #7a4f2f;
+    --brown-dark: #4c2f1d;
+    --wood: #b98c5f;
+    --white: #fffdf9;
+}
+
 *.hero-header {
     background-image: url('../images/sha-cafe-banner.png')!important;
     background-size: cover !important;
@@ -17,15 +27,15 @@
 /* CSS for navigation bar and animations. Animations and navbar from https://www.youtube.com/watch?v=5jWQVhJxU7c*/
 
 .navbar {   
-    background-color: var(--brown-dark);
+    background-color: var(--brown-dark)!important; 
     background-image: url("../images/navbar-banner.png") !important;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    padding: 20px 0;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    overflow: hidden !important;
+    display: flex !important;
+    justify-content: center !important;
+    padding: 20px 0 !important;
 }
 
 ul {
