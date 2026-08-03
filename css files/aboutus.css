@@ -1,0 +1,264 @@
+/* Geral Rohan Dharmaraj 261120H */ 
+
+/*NAVIGATION BAR credit to_ https://www.youtube.com/watch?v=5jWQVhJxU7c*/
+
+/*big banner background, centered flex column, padding at the top.*/
+.hero_header { 
+  background-image: url('images/SHA CAFE BANNER.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 60px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/*brown bar with background image*/
+.navbar {
+  background-color: #49301a;
+  background-image: url("images/navbar banner.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+/*horizontal nav list, no bullets, have spacing*/
+ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  gap: 50px;
+}
+
+/* needed for underline effect*/ 
+ul li {
+  position: relative;
+}
+
+/*smooth color transition*/
+ul li a {
+  position: relative;
+  text-decoration: none;
+  font-family: "CG Times", "Times New Roman", Times, serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  transition: color 0.3s ease-in-out;
+}
+
+/* underline bar animation */
+ul li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  display: block;
+  height: 0.2em;
+  width: 0;
+  background-color: #c5a880;
+  transition: width 0.3s ease-in-out;
+}
+ul li a:hover::after{
+    width: 100%;
+}
+
+/* text turns gold*/ 
+ul li a:hover{
+    color: #c5a880;
+}
+
+/*  keeps gold color + underline */
+ul li a.active {
+    color: #c5a880;
+}
+ul li a.active::after {
+    width: 100%;
+}
+/* Layout and style for about us page and founders page */
+
+/*overall style of the page*/
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f7f2e8;
+  color: #333;
+  line-height: 1.5;
+}
+
+/*Makes all images responsive to fit container*/
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/*centres classes*/
+.about_us,
+.founders_page {
+  max-width: 920px;
+  margin: 40px auto;
+  padding: 24px 28px;
+}
+
+/*centres heading*/ 
+h1 {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+/*side‑by‑side layout with gaps*/
+.about_content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  align-items: flex-start;
+  margin-bottom: 28px;
+  padding: 8px 0;
+}
+
+/*makes these classes flex to fit*/
+.about_story,
+.about_image,
+.founders_description {
+  flex: 1;
+  min-width: 280px;
+}
+
+/*subheading style*/
+.about_story h2 {
+  margin-top: 0;
+  color: #7a5a2b;
+  margin-bottom: 10px;
+}
+
+/*paragraph restriction*/
+.about_story p {
+  max-width: 680px;
+}
+
+/*image size restriction */
+.about_image {
+  max-width: 520px;
+}
+
+/*image container*/
+.image_box {
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+/*actual image*/
+.image_box_img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/*read more button style*/
+.read_more_button,
+.button {
+  display: inline-block;
+  padding: 10px 18px;
+  background: #8a6b3f;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-top: 8px;
+  transition: background 0.2s ease-in-out;
+}
+
+/*hover effect for buttons*/
+.read_more_button:hover,
+.button:hover {
+  background: #6f5330;
+}
+
+/* Founders Page */
+
+/*layout for founder photo and description*/
+.founder_item {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+/*stacks photo and description*/
+.photo_block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+/*flexible description area*/
+.founder_description {
+  flex: 1;
+}
+
+/*circular frame for founder photos*/
+.circle_photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: #d9c5a0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
+}
+
+/*Ensures photo fills the circle*/
+.circle_photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/*Small caption under image*/
+.image_credit {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #7a6438;
+  text-align: center;
+}
+
+/* For smaller screens to view */
+@media (max-width: 760px) {
+  .about_us,
+  .founders_page {
+    margin: 24px 16px;
+    padding: 18px;
+  }
+
+  .about_content,
+  .founder_item {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  ul {
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+
+  ul li a {
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,88 @@
+<!--MELVYN JIT SINGH, 261156K-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css files/services.css">
+    <title>Services - The Sha Cafe</title>
+</head>
+<body>
+    <body>
+    <a href="services.html" class="back-homeBtn">←</a>
+    <div class="serviceform-card"> 
+        <div class="serviceform-card-icon">
+            <img src="images/sha-cafe-logo.png" alt="Location Booking" >
+        </div>
+        <h2>EVENT CATERING</h2>
+        <p></p>
+        <!--Form -->
+    <form class="service-form" action="thankyou.html">
+        <div class="serviceform-row">
+            <div class="serviceform-group">
+                <label for="fullName">Full Name <span>*</span></label>
+                <input type="text" id="fullName" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="serviceform-group">
+                <label for="email">Email Address <span>*</span></label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+            </div>
+        </div>
+
+        <div class="serviceform-row">
+            <div class="serviceform-group">
+                <label for="phone">Phone Number <span>*</span></label>
+                <input type="tel" id="phone" placeholder="Enter your phone number" required>
+            </div>
+
+            <div class="serviceform-group">
+                <label for="catering-type">Event Type <span>*</span></label>
+                <select id="catering-type" required>
+                    <option value="catering-type" disabled selected>Select catering type</option>
+                    <option value="buffet">Buffet Catering</option>
+                    <option value="Bento-Packed">Bento & Packed Meals</option>
+                    <option value="Seated">Plated / Sit-Down Service</option>
+                    <option value="High-Tea">High Tea Catering</option>
+                    <option value="Mobile">Mobile & BBQ Catering</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="serviceform-row">
+            <div class="serviceform-group">
+                <label for="eventDate">Event Date <span>*</span></label>
+                <input type="date" id="eventDate" required>
+            </div>
+
+            <div class="serviceform-group">
+                <label for="guestCount">Expected Guest Count <span>*</span></label>
+                <input type="number" id="guestCount" min="1" placeholder="e.g. 50" required>
+            </div>
+        </div>
+
+        <div class="serviceform-group">
+            <label for="event-location">Event Location</label>
+            <input type="text" id="event-location" rows="3" placeholder="Please state the event location and unit number if relevant..." required>
+        </div>
+
+        <div class="serviceform-group">
+            <label for="requests">Special Requests / Requirements</label>
+            <textarea id="requests" rows="3" placeholder="Tell us if their any dietary requirements or specifications..."></textarea>
+        </div>
+
+        <div class="serviceform-group checkbox-group">
+            <label class="checkbox-label">
+                <input type="checkbox" required>
+                <span>I agree to the <a href="#">terms and conditions</a> and <a href="#">privacy policy</a>.</span>
+            </label>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="form-submitBtn">
+            Request Catering Service
+        </button>
+    </form>
+    </div>

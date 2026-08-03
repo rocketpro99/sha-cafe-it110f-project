@@ -1,0 +1,1027 @@
+:root {
+    color-scheme: light;
+    --cream: #f7efe8;
+    --cream-dark: #efe0d2;
+    --brown: #7a4f2f;
+    --brown-dark: #4c2f1d;
+    --wood: #b98c5f;
+    --white: #fffdf9;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #fcf6ee 0%, var(--cream) 100%);
+    color: var(--brown-dark);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+h1,
+h2,
+h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    margin: 0;
+}
+
+.pageheader {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem 0.5rem;
+    text-align: center;
+}
+
+.logo {
+    margin: 0 auto 1rem;
+    width: 120px;
+}
+
+.siteTitle {
+    font-size: 2.6rem;
+    color: var(--brown-dark);
+    margin-bottom: 0.75rem;
+}
+
+.navlinks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+}
+
+.navlinks a {
+    text-decoration: none;
+    color: var(--brown-dark);
+    background: rgba(255, 255, 255, 0.85);
+    padding: 0.85rem 1.2rem;
+    border-radius: 999px;
+    font-weight: 600;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.navlinks a:hover {
+    background: var(--cream-dark);
+    transform: translateY(-1px);
+}
+
+.hero {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(280px, 1fr) minmax(320px, 1.2fr);
+    gap: 2rem;
+    align-items: center;
+    padding: 0 1rem 2rem;
+}
+
+.heroimage {
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(76, 47, 29, 0.16);
+}
+
+.herotext h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.herotext p {
+    color: #5f4631;
+    font-size: 1.03rem;
+    margin: 0;
+}
+
+.section-title {
+    text-align: center;
+    margin: 2rem 0 1rem;
+    font-size: 2rem;
+}
+
+.carousel {
+    max-width: 1100px;
+    margin: 0 auto 2.5rem;
+    padding: 0 1rem;
+}
+
+.carousel input {
+    display: none;
+}
+
+.carousel-inner {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(76, 47, 29, 0.16);
+    background: rgba(255, 255, 255, 0.92);
+}
+
+.slides {
+    display: grid;
+    gap: 0.75rem;
+    padding: 1rem;
+}
+
+.slide {
+    display: none;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.75rem;
+}
+
+.slide img {
+    width: 100%;
+    min-height: 180px;
+    border-radius: 14px;
+    box-shadow: 0 12px 28px rgba(76, 47, 29, 0.14);
+}
+/* show the right slide*/
+#slide1:checked ~ .carousel-inner .slide1,
+#slide2:checked ~ .carousel-inner .slide2,
+#slide3:checked ~ .carousel-inner .slide3 {
+    display: grid;
+}
+
+.carouselcontrols {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem 0;
+}
+
+.carouselcontrols label {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease;
+    display: grid;
+    place-items: center;
+    font-size: 0.75rem;
+    color: transparent;
+}
+
+.carouselcontrols label:hover {
+    transform: scale(1.1);
+}
+
+#slide1:checked ~ .carouselcontrols label[for="slide1"],
+#slide2:checked ~ .carouselcontrols label[for="slide2"],
+#slide3:checked ~ .carouselcontrols label[for="slide3"] {
+    background: var(--brown);
+    color: white;
+}
+/* contact form formating and colour*/
+.contactFooter {
+    background: linear-gradient(135deg, #b58b6a 0%, #9b6d4e 100%);
+    color: #fff;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 3.5rem 5%;
+    margin-top: 2rem;
+}
+
+.contactTitleLine {
+    width: 95px;
+    height: 2px;
+    background: #fff;
+    margin-bottom: 1.5rem;
+}
+/*spacing for the svgs*/
+.contactDescription {
+    font-size: 1rem;
+    line-height: 1.8;
+    max-width: 520px;
+    margin-bottom: 4rem;
+    color: #f6e7dc;
+}
+/*space between the svgs*/
+.contactInfo {
+    display: grid;
+    gap: 2rem;
+}
+/*allignment of the svgs and text*/
+.contactInfoItem {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+}
+/*size and colour of the svgs*/
+.contactIcon {
+    width: 24px;
+    height: 24px;
+    color: #fff;
+    flex-shrink: 0;
+}
+/*styling of the text*/
+.contactName {
+    font-family: Georgia, serif;
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+.contactPhone,
+.contactSub {
+    font-size: 0.95rem;
+    color: #f6e7dc;
+}
+
+.formGroup {
+    display: grid;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.formGroup label {
+    color: #fff;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+/*styling of the input fields and textarea*/
+.formGroup input,
+.formGroup textarea {
+    width: 100%;
+    padding: 0.95rem 1rem;
+    border-radius: 14px;
+    border: none;
+    background: #fff;
+    color: #4c2f1d;
+    font-size: 0.95rem;
+    resize: vertical;
+}
+/*styling of the submit button*/
+.submitBtn {
+    background: #fff;
+    color: #4c2f1d;
+    border: none;
+    border-radius: 999px;
+    padding: 0.95rem 1.8rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+.submitBtn:hover {
+    background: #f4e8dd;
+    transform: translateY(-1px);
+}
+/* spacing of the join our force*/
+.join-section {
+  max-width: 1100px;
+  margin: 2.5rem auto;
+  padding: 1rem;
+}
+/*white border for the join our forces*/
+.join-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  background: rgba(255,255,255,0.95);
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 20px 40px rgba(76, 47, 29, 0.12);
+}
+
+.join-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+  object-fit: cover;
+}
+/*font size and colour of the paragraph*/
+.join-content h2 {
+  font-size: 2.6rem;
+  color: var(--brown-dark);
+  margin-bottom: 0.75rem;
+}
+
+.join-content p {
+  color: #5f4631;
+  font-size: 1.03rem;
+  line-height: 1.6;
+}
+/* the join our force button*/
+.join-btn {
+  display: inline-block;
+  margin-top: 1.25rem;
+  background: var(--brown);
+  color: var(--white);
+  padding: 0.95rem 1.8rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+}
+@media (max-width: 900px) {
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .contactFooter {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 720px) {
+    .siteTitle {
+        font-size: 2rem;
+    }
+
+    .navlinks {
+        gap: 0.5rem;
+    }
+
+    .carousel-inner {
+        border-radius: 16px;
+    }
+
+    .slide {
+        grid-template-columns: 1fr;
+    }
+
+    .carouselcontrols {
+        gap: 0.35rem;
+    }
+}
+/*hover effect for the join our force button*/
+@media (max-width: 900px) {
+  .join-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .join-content h2 {
+    font-size: 2rem;
+  }
+
+  .join-btn {
+    display: block;
+    margin: 1rem auto 0;
+  }
+}
+/*-------------end  of index.html styling------------------*/
+/* thank you page styling */
+.thankyouSection {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+    background: linear-gradient(180deg, #fcf6ee 0%, #f4e0ce 100%);
+}
+/*white boardwer styling for the thank you page*/
+.thankyouCard {
+    max-width: 620px;
+    width: 100%;
+    padding: 2.5rem 2rem;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 26px;
+    box-shadow: 0 24px 60px rgba(76, 47, 29, 0.15);
+    text-align: center;
+}
+/* thank you page heading styling*/
+.thankyouCard h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--brown-dark);
+}
+
+.thankyouCard p {
+    color: #5f4631;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 1.75rem;
+}
+/*styling of the thank you button*/
+.thankyouCard a {
+    display: inline-block;
+    text-decoration: none;
+    background: var(--brown);
+    color: var(--white);
+    padding: 0.95rem 1.8rem;
+    border-radius: 999px;
+    box-shadow: 0 12px 24px rgba(76, 47, 29, 0.16);
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.thankyouCard a:hover {
+    background: var(--wood);
+    transform: translateY(-1px);
+}
+/*-------------end of thank you page styling------------------*/
+/*THE SHA CAFE — Job Application Page*/
+:root {
+  --color-bg-warm: #e2d3bd;
+  --color-bg-warm-dark: #d8c6ab;
+  --color-brown-900: #3a2416;
+  --color-brown-800: #4a2f1c;
+  --color-brown-700: #5c3a22;
+  --color-brown-600: #6b4226;
+  --color-brown-accent: #7a4a26;
+  --color-cream: #faf7f2;
+  --color-cream-card: #fbf8f3;
+  --color-input-border: #e3dccf;
+  --color-input-bg: #fdfcfa;
+  --color-placeholder: #ada08c;
+  --color-label: #3a2b1d;
+  --color-footer-bg: #cdb99a;
+  --color-focus-ring: #8a5a2e;
+
+  --font-display: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --radius-lg: 20px;
+  --radius-md: 10px;
+  --radius-sm: 6px;
+}
+/*tells browser to smoothly animated*/
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--color-brown-900);
+  background: var(--color-bg-warm);
+}
+/* removes the default margin and padding from all elements and sets the box-sizing to border-box*/
+img, svg {
+  display: block;
+}
+/* removes the default underline from all links and sets the colour to brown accent*/
+a {
+  color: var(--color-brown-accent);
+}
+
+/* gives the hero section a background colour and spacing*/
+.hero {
+  position: relative;
+  min-height: 90vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 2rem;
+  padding: 4rem 5vw 5rem;
+  background: linear-gradient(180deg, var(--color-bg-warm) 0%, var(--color-bg-warm-dark) 100%);
+  overflow: hidden;
+}
+/* gives the hero image a border radius and shadow*/
+.heroillustration {
+  width: 100%;
+  height: 100%;
+}
+/* gives the hero content a proper spacing and alignment*/
+.herocontent {
+  position: relative;
+  z-index: 1;
+  max-width: 28rem;
+  padding-right: 2rem;
+  padding-bottom: 34vh;
+}
+/* gives the hero title a proper font size and colour*/
+.herotitle {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.2rem, 4vw, 3.15rem);
+  line-height: 1.15;
+  margin: 0 0 1.25rem;
+  color: var(--color-brown-900);
+}
+/* colour for the sha cafe title*/
+.herotitle-accent {
+  color: var(--color-brown-700);
+}
+/* line for title and paragraph*/
+.herodivider {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+}
+/* line for title and paragraph*/
+.herodividerline {
+  width: 2.5rem;
+  height: 2px;
+  background: var(--color-brown-accent);
+}
+/* gives the hero paragraph a proper font size and colour*/
+.herostyling {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--color-brown-800);
+  max-width: 24rem;
+  margin: 0 0 2.25rem;
+}
+/* gives the hero benefits a proper spacing and removes bullets*/
+.herobenefitstyling {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.35rem;
+}
+/* gives the hero benefits a proper spacing and alignment*/
+.hernobenefit {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.hernobenefiticon {
+  flex: none;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  background: rgba(122, 74, 38, 0.14);
+  color: var(--color-brown-700);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.herobenefittext {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--color-brown-800);
+}
+
+.herobenefittextStrong {
+  font-size: 1rem;
+  color: var(--color-brown-900);
+}
+
+/*border for the form*/
+.formcard{
+  background: var(--color-cream-card);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 25px 60px -15px rgba(58, 36, 22, 0.35);
+  padding: 2.75rem 3rem 3rem;
+  max-width: 42rem;
+  margin-left: auto;
+}
+/* gives the form title a proper font size and colour*/
+.formcardTitle {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.9rem;
+  text-align: center;
+  margin: 0 0 0.4rem;
+  color: var(--color-brown-900);
+  position: relative;
+  padding-bottom: 0.85rem;
+}
+/*a line under the job application*/
+.formcardTitle::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3rem;
+  height: 3px;
+  background: var(--color-brown-accent);
+  border-radius: 2px;
+}
+/*gives the form the font size and colour*/
+.formcardSubtitle {
+  text-align: center;
+  color: #7a6a57;
+  font-size: 0.92rem;
+  margin: 0 0 2rem;
+}
+/* gives the form a proper spacing and alignment*/
+.fromgrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.4rem 1.5rem;
+}
+
+/* proper spacing of the textarea*/
+.fieldfull {
+  grid-column: 1 / -1;
+}
+/* bolds the label of the textarea*/
+.fieldlabel {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-label);
+}
+
+.required {
+  color: #b5482f;
+}
+/* give font size and colour to the input fields and textarea*/
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  color: var(--color-brown-900);
+  background: var(--color-input-bg);
+  border: 1px solid var(--color-input-border);
+  border-radius: var(--radius-md);
+  padding: 0.7rem 0.9rem;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--color-placeholder);
+}
+/* gives the textarea a proper height and font size*/ 
+textarea {
+  resize: vertical;
+  min-height: 3.2rem;
+  font-family: var(--font-body);
+}
+
+/* Custom select chevron */
+.selectwrap {
+  position: relative;
+}
+/* to add aroow for selection*/
+.selectwrapSelect {
+  appearance: none;
+  -webkit-appearance: none;
+  padding-right: 2.4rem;
+  cursor: pointer;
+}
+
+.selectwrap::after {
+  content: "";
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  width: 0.55rem;
+  height: 0.55rem;
+  border-right: 2px solid var(--color-brown-700);
+  border-bottom: 2px solid var(--color-brown-700);
+  transform: translateY(-70%) rotate(45deg);
+  pointer-events: none;
+}
+
+/* File upload */
+.filerow {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  flex-wrap: wrap;
+}
+/* gives the file upload button a proper spacing and colour*/
+.filebutton {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  background: var(--color-input-bg);
+  border: 1px solid var(--color-input-border);
+  border-radius: var(--radius-sm);
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-brown-800);
+  cursor: pointer;
+}
+/*Visually hides the actual file input (accessible but invisible).*/
+.fileinput {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.filestatus {
+  font-size: 0.88rem;
+  color: #7a6a57;
+}
+
+.filehint {
+  font-size: 0.8rem;
+  color: #9a8b76;
+  margin-left: auto;
+}
+
+/* Consent checkbox */
+.fieldconsent {
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+/* Adjust the checkbox size and spacing, and give it the brown*/
+.fieldconsentInput[type="checkbox"] {
+  margin-top: 0.2rem;
+  width: 1.05rem;
+  height: 1.05rem;
+  accent-color: var(--color-brown-700);
+  flex: none;
+}
+
+.fieldconsentLabel {
+  font-weight: 400;
+  font-size: 0.88rem;
+  color: var(--color-brown-800);
+}
+
+.fieldconsent a {
+  text-decoration: underline;
+}
+
+/* Submit button */
+.submit-btn {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background: var(--color-brown-900);
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius-md);
+  padding: 0.95rem 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.15s ease, transform 0.1s ease;
+}
+
+.submit-btn:hover {
+  background: var(--color-brown-800);
+}
+
+.submit-btn:active {
+  transform: translateY(1px);
+}
+
+/* FOOTER */
+
+.sitefooter {
+  background: var(--color-footer-bg);
+  color: var(--color-brown-900);
+  padding: 1.75rem 5vw;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  font-size: 0.9rem;
+}
+/* gives a proper spacing for logo and link*/
+.footeritem {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.footerhome-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.95rem 1.35rem;
+  min-width: 10rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #6b3f21 0%, #4a2a15 100%);
+  color: #fffdf9;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  box-shadow: 0 12px 24px rgba(58, 36, 22, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.footerhome-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px rgba(58, 36, 22, 0.24);
+  background: linear-gradient(135deg, #7b4826 0%, #5b3219 100%);
+}
+
+/* make footer links black*/
+.footeritem a {
+  color: var(--color-brown-900);
+  text-decoration: none;
+}
+
+/*RESPONSIVE*/
+
+@media (max-width: 980px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 3rem 6vw 3rem;
+  }
+
+  .herocontent {
+    max-width: none;
+    padding-right: 0;
+  }
+
+  .formcard{
+    margin-left: 0;
+    max-width: none;
+    padding: 2rem 1.5rem 2.25rem;
+  }
+}
+/* makes the form and footer responsive for mobile devices*/
+@media (max-width: 640px) {
+  .fromgrid {
+    grid-template-columns: 1fr;
+  }
+
+  .filehint {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .sitefooter {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footerhome-btn {
+    width: fit-content;
+    padding: 0.95rem 1.25rem;
+  }
+}
+
+/*Reduced motion*/
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  * {
+    transition: none !important;
+  }
+}
+/*------------END OF JOB APPLICATION PAGE STYLING------------------*/
+:root {
+  --cream: #fbf5eb;
+  --brown: #402714;
+  --gold: #9d7041;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--cream);
+  font-family: Georgia, serif;
+}
+
+/* Opening screen container */
+.logointro {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: radial-gradient(circle at center, #fffdf8 0%, #f8eee0 52%, #ead8c1 100%);
+  animation: introExit 1s ease-in-out 5.2s forwards;
+}
+
+/* Decorative warm glow circle behind logo */
+.logointro::before {
+  content: "";
+  position: absolute;
+  width: min(70vw, 700px);
+  aspect-ratio: 1;
+  border: 1px solid rgba(157, 112, 65, 0.25);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 30px rgba(157, 112, 65, 0.04),
+    0 0 0 70px rgba(157, 112, 65, 0.025),
+    0 0 80px rgba(96, 55, 22, 0.16);
+  transform: scale(0);
+  animation: circleBloom 2.2s cubic-bezier(.16, 1, .3, 1) 0.15s forwards;
+}
+
+/* Logo container */
+.logowrap {
+  position: relative;
+  width: min(76vw, 620px);
+  padding: 2rem;
+  opacity: 0;
+  transform: translateY(28px) scale(0.88);
+  animation: logoEnter 1.6s cubic-bezier(.16, 1, .3, 1) 0.65s forwards;
+}
+
+/* The Logo Image */
+.logo {
+  display: block;
+  width: 70%;
+  height: auto;
+  position: relative;
+  z-index: 2;
+  /* Top to bottom reveal effect */
+  clip-path: inset(0 0 100% 0);
+  filter: drop-shadow(0 14px 22px rgba(64, 39, 20, 0.14));
+  animation: logoReveal 1.8s cubic-bezier(.65, 0, .35, 1) 0.9s forwards;
+}
+
+/* Shimmering shine overlay */
+.shine {
+  position: absolute;
+  z-index: 3;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.shine::after {
+  content: "";
+  position: absolute;
+  top: -25%;
+  left: -80%;
+  width: 45%;
+  height: 150%;
+  transform: rotate(20deg);
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.05) 25%,
+    rgba(255, 247, 223, 0.85) 50%,
+    rgba(255, 255, 255, 0.05) 75%,
+    transparent 100%
+  );
+  animation: shimmer 1.3s ease-in-out 2.35s forwards;
+}
+/* Welcome text styling */
+.welcometext {
+  position: absolute;
+  bottom: -1.3rem;
+  left: 50%;
+  z-index: 4;
+  width: max-content;
+  transform: translateX(-50%) translateY(10px);
+  color: var(--brown);
+  font-family: Arial, sans-serif;
+  font-size: clamp(0.62rem, 1.2vw, 0.8rem);
+  font-weight: 600;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  opacity: 0;
+  animation: welcomeAppear 1s ease 3.25s forwards;
+}
+/*Animation Keyframes*/
+/* used for animation sequence by specifying the starting and ending states of the animation. */  
+@keyframes circleBloom {
+  0% { opacity: 0; transform: scale(0.35) rotate(-20deg); }
+  100% { opacity: 1; transform: scale(1) rotate(0); }
+}
+
+@keyframes logoEnter {
+  0% { opacity: 0; transform: translateY(28px) scale(0.88); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes logoReveal {
+  0% { clip-path: inset(0 0 100% 0); }
+  100% { clip-path: inset(0 0 0 0); }
+}
+
+@keyframes shimmer {
+  from { left: -80%; }
+  to { left: 140%; }
+}
+
+@keyframes sparkleAppear {
+  to { opacity: 1; }
+}
+
+@keyframes welcomeAppear {
+  to { opacity: 0.8; transform: translateX(-50%) translateY(0); }
+}
+
+@keyframes introExit {
+  0% { opacity: 1; visibility: visible; }
+  100% { opacity: 0; visibility: hidden; pointer-events: none; }
+}

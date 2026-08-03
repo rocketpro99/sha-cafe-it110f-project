@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Map Locations</title>
+    <link rel="stylesheet" href="css files/global.css">
+    <link rel="stylesheet" href="css files/stores.css">
+</head>
+<body>
+    <header class="hero-header">
+      <img src="images/Transparent.png" alt="The Sha Cafe Logo" width="200" height="200" style="display: block; margin: 0 auto 0 auto;">
+    </header>
+    <nav class="navbar">
+      <ul class="nav-link">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutus.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="prices.html">Prices</a></li>
+        <li><a href="stores.html" class="active">Stores</a></li>
+      </ul>
+    </nav>
+    <div class="mapbox">
+        <h1>Singapore Cafe Map</h1>
+        <p>Click on any marker to explore one of our cafe locations in Singapore.</p>
+
+        <svg viewBox="0 0 800 450">
+            <image href="images/Singapore-Map.png" x="0" y="0" width="800" height="450" />
+
+            <g class="marker-group">
+                <circle class="marker" cx="190" cy="265"></circle>
+                <text class="markertext" x="200" y="260">Jurong east</text>
+                <g class="popup-content">
+                    <rect class="pop-up-box"></rect>
+                    <image class="pop-up-image" href="images/Mall-2-image.png"></image>
+                    <text class="pop-up-header">Jurong East Location</text>
+                    <text class="pop-up-text Line-1">Open daily from 9am to 9pm</text>
+                    <text class="pop-up-text Line-2">Located at Jem mall, #02-17</text>
+                    <text class="pop-up-text Line-3">Contact: +65 1234 8756</text>
+                    <text class="pop-up-text Line-4">Reviews</text>
+                    <text class="pop-up-text Line-5">No reviews yet!</text>
+                </g>
+            </g>
+
+            <g class="marker-group">
+                <circle class="marker" cx="440" cy="320"></circle>
+                <text class="markertext" x="448" y="312">Marina Bay Sands</text>
+                <g class="popup-content">
+                    <rect class="pop-up-box"></rect>
+                    <image class="pop-up-image" href="images/Marina-Bay-image.png"></image>
+                    <text class="pop-up-header">Marina Bay Sands Location</text>
+                    <text class="pop-up-text Line-1">Open daily from 9am to 9pm</text>
+                    <text class="pop-up-text Line-2">Located at Marina Bay Sands Singapore, #04-48</text>
+                    <text class="pop-up-text Line-3">Contact: +65 4321 5678</text>
+                    <text class="pop-up-text Line-4">Reviews</text>
+                    <text class="pop-up-text Line-5">No reviews yet!</text>
+                </g>
+            </g>
+
+            <g class="marker-group">
+                <circle class="marker" cx="500" cy="140"></circle>
+                <text class="markertext" x="507" y="138">Punggol</text>
+                <g class="popup-content">
+                    <rect class="pop-up-box"></rect>
+                    <image class="pop-up-image" href="images/Mall-1-image.png"></image>
+                    <text class="pop-up-header">Punggol Location</text>
+                    <text class="pop-up-text Line-1">Open daily from 9am to 9pm</text>
+                    <text class="pop-up-text Line-2">Located at Waterway point, #01-22</text>
+                    <text class="pop-up-text Line-3">Contact: +65 8765 4321</text>  
+                    <text class="pop-up-text Line-4">Reviews</text>
+                    <text class="pop-up-text Line-5">No reviews yet!</text>
+                </g>
+            </g>
+
+            <g class="marker-group">
+                <text class="markertext" x="305" y="140">Singapore Zoo</text>
+                <circle class="marker" cx="300" cy="150"></circle>
+                <g class="popup-content">
+                    <rect class="pop-up-box"></rect>
+                    <image class="pop-up-image" href="images/Singapore-Zoo-image.png"></image>
+                    <text class="pop-up-header">Singapore Zoo Location</text>
+                    <text class="pop-up-text Line-1">Open daily from 9am to 9pm</text>
+                    <text class="pop-up-text Line-2">Located at Singapore Zoo, 80 Mandai Lake Rd</text>
+                    <text class="pop-up-text Line-3">Contact: +65 5678 1234</text>
+                    <text class="pop-up-text Line-4">Reviews</text>
+                    <text class="pop-up-text Line-5">No reviews yet!</text>
+                </g>
+            </g>
+
+            <g class="marker-group">
+                <circle class="marker" cx="400" cy="211"></circle>
+                <text class="markertext" x="370" y="200">Ang Mo Kio</text>
+                <g class="popup-content">
+                    <rect class="pop-up-box"></rect>
+                    <image class="pop-up-image" href="images/Mall-3-image.png"></image>
+                    <text class="pop-up-header">Ang Mo Kio Location</text>
+                    <text class="pop-up-text Line-1">Open daily from 9am to 9pm</text>
+                    <text class="pop-up-text Line-2">Located at Ang Mo Kio hub, #02-61</text>
+                    <text class="pop-up-text Line-3">Contact: +65 5678 4321</text>
+                    <text class="pop-up-text Line-4">Reviews</text>
+                    <text class="pop-up-text Line-5">No reviews yet!</text>
+                </g>
+            </g>
+        </svg>
+    </div>

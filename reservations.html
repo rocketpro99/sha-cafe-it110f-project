@@ -1,0 +1,88 @@
+<!---AUTHOR: ADAM MUHAMMAD BIN YUZAIREE, 
+	ADMIN NO: 261483P
+	--->
+
+<!--BUTTONS AND TYPE REQ CODE CREDITED TO W3SCHOOLS-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="css files/prices.css">
+  <a href="prices.html">Return to Menu</a>
+</head>
+<body>
+<section class="reservation-section">
+
+    <div class="reservation-title">
+        <h2>Reserve Your Table</h2>
+        <p>Reserve a comfortable seat for your family and friends. We recommend booking in advance during weekends and holidays.</p>
+    </div>
+
+    <div class="reservation-wrapper">
+
+<!--RESERVATION LEFT-->
+        <div class="reservation-card">
+            <h3>Available Reservation Timings</h3>
+            <table class="reservation-table">
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>10:00 AM</td><td class="available">Available</td></tr>
+                    <tr><td>11:00 AM</td><td class="available">Available</td></tr>
+                    <tr><td>12:00 PM</td><td class="limited">Limited</td></tr>
+                    <tr><td>1:00 PM</td><td class="full">Full</td></tr>
+                    <tr><td>2:00 PM</td><td class="available">Available</td></tr>
+                    <tr><td>3:00 PM</td><td class="available">Available</td></tr>
+                    <tr><td>4:00 PM</td><td class="limited">Limited</td></tr>
+                    <tr><td>5:00 PM</td><td class="available">Available</td></tr>
+                    <tr><td>6:00 PM</td><td class="available">Available</td></tr>
+                    <tr><td>7:00 PM</td><td class="available">Available</td></tr>
+                    <tr><td>8:00 PM</td><td class="full">Full</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+<!-- RESERVATION RIGHT -->
+        <div class="reservation-card">
+            <h3>Reservation Form</h3>
+            <form action="#">
+                <label>Full Name</label>
+                <input type="text" required>
+                <label>Email Address</label>
+                <input type="email" required>
+                <label>Phone Number</label>
+                <input type="tel" required>
+                <label>Reservation Date</label>
+                <input type="date" required>
+                <label>Preferred Time</label>
+                <select required>
+                    <option>Select a Time</option>
+                    <option>10:00 AM</option>
+                    <option>11:00 AM</option>
+                    <option>12:00 PM</option>
+                    <option>2:00 PM</option>
+                    <option>3:00 PM</option>
+                    <option>4:00 PM</option>
+                    <option>5:00 PM</option>
+                    <option>6:00 PM</option>
+                    <option>7:00 PM</option>
+                </select>
+                <label>Number of Guests</label>
+                <input type="number" min="1" max="12" required>
+                <label>Special Requests</label>
+                <textarea rows="5"
+                placeholder="Dietary requirements, birthday celebrations, seating preferences..."></textarea>
+                <button type="submit" class="reservation-btn">
+                    Reserve Table
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+</body>
+</html>

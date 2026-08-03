@@ -1,0 +1,167 @@
+/* Jariel Tan Jun Rui / 261323R */
+html
+        body {
+            font-family: Arial, sans-serif;
+            background: #f6efe8;
+            margin: 0;
+            padding: 0;
+            color: #2f241d;
+            min-height: 100%;
+            overflow-x: hidden;
+            box-sizing: border-box;
+        }
+
+        .navbar {
+            position: relative;
+            width: 100vw;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            box-sizing: border-box;
+        }
+
+        .mapbox {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 24px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 {
+            margin-top: 0;
+            color: #7a3f1d;
+        }
+
+        svg {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #e8f7ff, #fff4dc);
+        }
+
+        .marker {
+            cursor: pointer;
+            transition: transform 0.2s ease, fill 0.2s ease;
+            transform-origin: center;
+            fill: #89451d;
+            stroke: #ffffff;
+            stroke-width: 2px;
+            r: 6;
+          
+
+        }
+
+        .marker:hover {
+            transform: scale(1.03);
+            fill: #89451d;
+            
+        }
+
+        .marker-group {
+            cursor: pointer;
+        }
+
+        .popup-content {
+            opacity: 0;
+            transition: opacity 0.2s ease;
+            pointer-events: none;
+        }
+
+        .pop-up-box {
+            fill: #ffefe7;
+            stroke: #c5a880;
+            stroke-width: 1px;
+            width: 180px;
+            height: 425px;
+            rx: 8px;
+            ry: 8px;
+            
+            
+        }
+
+        .pop-up-image {
+            width: 160px;
+            height: 100px;
+            x: 10; 
+            y: 10;
+        }
+
+        .pop-up-header {
+            font-size: 14px;
+            font-weight: bold;
+            fill: #4a2d15;
+            pointer-events: none;
+            text-anchor: middle;
+            transform: translate(90px, 130px);
+        }
+
+        .pop-up-text {
+            font-size: 10px;
+            font-weight: bold;
+            fill: #4a2d15;
+            pointer-events: none;
+            text-anchor: middle;
+        }
+
+        .Line-1 {
+            transform: translate(90px, 145px);
+        }
+
+        .Line-2 {
+            transform: translate(90px, 160px);
+            font-size: 8px;
+        }
+        .Line-3 {
+            transform: translate(90px, 175px);
+        }
+        .Line-4 {
+            transform: translate(90px, 200px);
+            text-decoration: underline;
+        }
+        .Line-5 {
+            transform: translate(90px, 215px);
+            font-size: 8px;
+            text-decoration: underline;
+            
+        }
+        .marker-group:hover .popup-content {
+            opacity: 1;
+        }
+
+        .markertext {
+            font-size: 10px;
+            font-weight: bold;
+            fill: #000000;
+            stroke: #ffffff;
+            stroke-width: 2px;
+            paint-order: stroke;
+            pointer-events: none;
+        }
+
+        @media (max-width: 760px) {
+  .about_us,
+  .founders_page {
+    margin: 24px 16px;
+    padding: 18px;
+  }
+
+  .about_content,
+  .founder_item {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  ul {
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+
+  ul li a {
+    font-size: 18px;
+  }
+  }

@@ -1,0 +1,484 @@
+/*MELVYN JIT SINGH, 261156K*/
+
+
+
+/* CSS for the body and headings */
+
+body {
+    background-color: #fcf4e9;
+}
+
+body {
+    font-family: "CG Times", "Times New Roman", Times, serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #333;
+}
+
+.service-container {
+    max-width: 1250px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+/* CSS for the underlined heading */
+
+.underlined-heading {
+    text-align: center;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.underlined-heading::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background-color: #c5a880;
+}
+
+
+/* CSS for the service cards section */
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 40px; 
+  padding: 0px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+    background: #fff;
+    padding: 40px 20px 20px 20px; 
+    border-radius: 10px;
+    text-align: center;
+    position: relative; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin-top: 30px; 
+}
+
+.card-icon {
+    position: absolute;
+    top: -30px; 
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    width: 50px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.arrow {
+    margin-top: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.arrowcirclebtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;      
+    height: 40px;     
+    border: 2px solid #49301a; 
+    border-radius: 50%; 
+    color: #49301a;
+    text-decoration: none;
+    font-size: 20px;
+    transition: all 0.3s ease; 
+    margin-top: 20px;
+}
+
+
+.arrowcirclebtn:hover {
+    background-color: #49301a;
+    color: #ffffff;
+    cursor: pointer;
+    transform: scale(1.1); 
+}
+
+
+
+:root {
+    color-scheme: light;
+    --cream: #f7efe8;
+    --cream-dark: #efe0d2;
+    --brown: #7a4f2f;
+    --brown-dark: #4c2f1d;
+    --wood: #b98c5f;
+    --white: #fffdf9;
+}
+
+.contactFooter {
+    background: linear-gradient(135deg, #b58b6a 0%, #9b6d4e 100%);
+    color: #fff;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 3.5rem 5%;
+    margin-top: 2rem;
+}
+
+.contactTitle {
+    font-size: 2.4rem;
+    margin-bottom: 0.4rem;
+}
+
+.contactTitleLine {
+    width: 72px;
+    height: 2px;
+    background: #fff;
+    margin-bottom: 1.5rem;
+}
+
+.contactDescription {
+    font-size: 1rem;
+    line-height: 1.8;
+    max-width: 520px;
+    margin-bottom: 2rem;
+    color: #f6e7dc;
+}
+
+.contactInfo {
+    display: grid;
+    gap: 1rem;
+}
+
+.contactInfoItem {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+}
+
+.contactIcon {
+    width: 24px;
+    height: 24px;
+    color: #fff;
+    flex-shrink: 0;
+}
+
+.contactName {
+    font-family: Georgia, serif;
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+.contactPhone,
+.contactSub {
+    font-size: 0.95rem;
+    color: #f6e7dc;
+}
+
+.formGroup {
+    display: grid;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.formGroup label {
+    color: #fff;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.formGroup input,
+.formGroup textarea {
+    width: 100%;
+    padding: 0.95rem 1rem;
+    border-radius: 14px;
+    border: none;
+    background: #fff;
+    color: #4c2f1d;
+    font-size: 0.95rem;
+    resize: vertical;
+}
+
+.submitBtn {
+    background: #fff;
+    color: #4c2f1d;
+    border: none;
+    border-radius: 999px;
+    padding: 0.95rem 1.8rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.submitBtn:hover {
+    background: #f4e8dd;
+    transform: translateY(-1px);
+}
+
+.thankyouSection {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+    background: linear-gradient(180deg, #fcf6ee 0%, #f4e0ce 100%);
+}
+
+.thankyouCard {
+    max-width: 620px;
+    width: 100%;
+    padding: 2.5rem 2rem;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 26px;
+    box-shadow: 0 24px 60px rgba(76, 47, 29, 0.15);
+    text-align: center;
+}
+
+.thankyouCard h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--brown-dark);
+}
+
+.thankyouCard p {
+    color: #5f4631;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 1.75rem;
+}
+
+.thankyouCard a {
+    display: inline-block;
+    text-decoration: none;
+    background: var(--brown);
+    color: var(--white);
+    padding: 0.95rem 1.8rem;
+    border-radius: 999px;
+    box-shadow: 0 12px 24px rgba(76, 47, 29, 0.16);
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.thankyouCard a:hover {
+    background: var(--wood);
+    transform: translateY(-1px);
+}
+
+/* CSS styles for service page forms*/
+
+.serviceform-card {
+    background: #fff;
+    padding: 50px 35px 35px 35px;  
+    border-radius: 20px;
+    text-align: center;
+    position: relative;  
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    max-width: 600px;
+    margin: 50px auto;  
+    margin-top: 5%;
+}
+
+
+.serviceform-card-icon {
+    position: absolute !important;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    padding: 6px;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.serviceform-card-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+
+.service-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: left;
+}
+
+.serviceform-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.serviceform-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.serviceform-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #4c2f1d;
+    font-family: Arial, sans-serif;
+}
+
+.sericeform-group label span {
+    color: #b94a4a;
+}
+
+.serviceform-group input,
+.serviceform-group select,
+.serviceform-group textarea {
+    width: 100%;
+    padding: 11px 14px;
+    border: 1px solid #e2d5c5;
+    border-radius: 10px;
+    background-color: #faf6f0;
+    color: #4c2f1d;
+    font-size: 0.95rem;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.serviceform-group input:focus,
+.serviceform-group select:focus,
+.serviceform-group textarea:focus {
+    outline: none;
+    border-color: #7a4f2f;
+    background-color: #ffffff;
+}
+
+
+.checkbox-group {
+    margin-top: 5px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    color: #5f4631;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #4c2f1d;
+    cursor: pointer;
+}
+
+.checkbox-label a {
+    color: #7a4f2f;
+    text-decoration: underline;
+}
+
+.form-submitBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #49301a;
+    color: #49301a;
+    border: none;
+    border-radius: 999px;
+    padding: 0.95rem 1.8rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease; 
+}
+
+.form-submitBtn:hover {
+    background-color: #49301a;
+    color: #ffffff;
+    cursor: pointer;
+    transform: scale(1.05); /
+}
+
+.back-homeBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;      
+    height: 40px;     
+    border: 2px solid #49301a; 
+    border-radius: 50%; 
+    color: #49301a;
+    text-decoration: none;
+    font-size: 20px;
+    transition: all 0.3s ease; 
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+
+.back-homeBtn:hover {
+    background-color: #49301a;
+    color: #ffffff;
+    cursor: pointer;
+    transform: scale(1.1); 
+}
+
+
+/* Simple responsive layout for smaller screens */
+* {
+    box-sizing: border-box;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 700px) {
+    .service-container {
+        padding: 16px;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding: 0 16px;
+    }
+
+    .contactFooter {
+        grid-template-columns: 1fr;
+        padding: 2.5rem 6%;
+    }
+
+    .serviceform-card,
+    .coffeemerch-card {
+        width: calc(100% - 32px);
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .serviceform-row {
+        grid-template-columns: 1fr;
+    }
+
+    .form-submitBtn {
+        width: 100%;
+    }
+
+    .back-homeBtn {
+        margin-left: 16px;
+    }
+
+    .thankyouCard {
+        width: calc(100% - 32px);
+        padding: 2rem 1.25rem;
+    }
+}

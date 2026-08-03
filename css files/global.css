@@ -1,0 +1,111 @@
+/* CSS for the header section seen at the top of the page */
+
+*.hero-header {
+    background-image: url('../images/sha-cafe-banner.png')!important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    padding: 60px 20px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    margin-bottom: 0px !important;
+    padding-bottom: 0px !important;
+}
+
+/* CSS for navigation bar and animations. Animations and navbar from https://www.youtube.com/watch?v=5jWQVhJxU7c*/
+
+.navbar {   
+    background-color: var(--brown-dark);
+    background-image: url("../images/navbar-banner.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    margin-top: 0;
+    margin: 0;
+    gap: 50px;
+}
+
+ul li a {
+    text-decoration: none;
+    font-family: "CG Times", "Times New Roman", Times, serif;
+    position: relative;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    transition: color 0.3s ease-in-out;
+
+}
+
+    ul li a::after{
+    content: '';
+    position: absolute;
+    display: block;
+    height: 0.2em;
+    width: 0%;
+    background-color: #c5a880;
+    transition: width 0.3s ease-in-out;
+}   
+
+ul li a:hover::after{
+    width: 100%;
+}
+
+ul li a:hover{
+    color: #c5a880;
+}   
+
+ul li a.active {
+    color: #c5a880;
+}
+
+ul li a.active::after {
+    width: 100%;
+}
+
+/* CSS for the header section seen at the top of the page */
+
+.hero-header {
+    background-image: url('images/SHA CAFE BANNER.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+@media screen and (max-width: 700px) {
+    .navbar {
+        padding: 16px;
+    }
+
+    ul {
+        flex-wrap: wrap;
+        gap: 12px 24px;
+    }
+
+    ul li a {
+        font-size: 17px;
+    }
+
+    .hero-header {
+        padding: 32px 16px 0;
+    }
+}
